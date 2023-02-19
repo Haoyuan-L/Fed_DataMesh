@@ -15,34 +15,54 @@ class HMSaleTrainDataLoader(Dataset):
         all_products_id (list): A list contains all product ids
     """
     def __init__(self, transactions, all_products_id):
-        self.customers, self.products, self.labels = self.get_dataset(transactions, all_products_id)
+        self.customers, self.products, self.prices, self.sales_channels, \
+        self.club_status, self.age_groups, self.product_groups, self.color_groups, \
+        self.index_name, self.labels = self.get_dataset(transactions, all_products_id)
 
     def __len__(self):
         return len(self.customers)
     
     def __getitem__(self, idx):
-        return self.customers[idx], self.products[idx], self.labels[idx]
+        return self.customers[idx], self.products[idx], self.prices[idx], self.sales_channels[idx], self.club_status[idx], \
+               self.age_groups[idx], self.product_groups[idx], self.color_groups[idx], self.index_name[idx], self.labels[idx]
     
     def get_dataset(self, transactions, all_products_id):
-        customers, products, labels = [], [], []
-        customer_product_set = set(zip(transactions['customer_id'], transactions['article_id']))
+        customers, products, prices, sales_channels, club_status, age_groups, product_groups, color_groups, index_name, labels  = [], [], [], [], [], [], [], [], [], []
+        customer_product_set = set(zip(transactions["customer_id"], transactions["article_id"], 
+                                       transactions["price"], transactions["sales_channel_id"], 
+                                       transactions["club_member_status"], transactions["age"], 
+                                       transactions["product_group_name"], transactions["colour_group_name"], transactions["index_name"]))
         
         """negative sampling"""
         # set up negative:positive ratio as 4:1
         negative_samples = 4
 
-        for u, i in tqdm(customer_product_set):
+        for u, i, price, sale, club, age, product, color, index in tqdm(customer_product_set):
             customers.append(u)
             products.append(i)
+            prices.append(price)
+            sales_channels.append(sale)
+            club_status.append(club)
+            age_groups.append(age)
+            product_groups.append(product)
+            color_groups.append(color)
+            index_name.append(index)
             labels.append(1)
             for _ in range(negative_samples):
                 negative_product = np.random.choice(all_products_id)
-                while (u, negative_product) in customer_product_set:
+                while (u, negative_product, price, sale, club, age, product, color, index) in customer_product_set:
                     negative_product = np.random.choice(all_products_id)
                 customers.append(u)
                 products.append(negative_product)
+                prices.append(price)
+                sales_channels.append(sale)
+                club_status.append(club)
+                age_groups.append(age)
+                product_groups.append(product)
+                color_groups.append(color)
+                index_name.append(index)
                 labels.append(0)
-        return customers, products, torch.tensor(labels)
+        return customers, products, prices, sales_channels, club_status, age_groups, product_groups, color_groups, index_name, torch.tensor(labels)
     
 def binary_acc(y_pred, y_test):
     y_pred_label = torch.softmax(y_pred, dim=1)
@@ -50,6 +70,7 @@ def binary_acc(y_pred, y_test):
     correct_pred = (y_pred_label == y_test).sum()
     acc = correct_pred/y_test.shape[0]
     return acc  
+     
     
 
 
