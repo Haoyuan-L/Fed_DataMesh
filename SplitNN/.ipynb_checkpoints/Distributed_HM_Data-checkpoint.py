@@ -6,8 +6,6 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "import torch\n",
-    "\n",
     "class Distributed_HM:\n",
     "    def __init__(self, data_owners, data_loader):\n",
     "        self.data_owners = data_owners\n",
@@ -54,15 +52,22 @@
  ],
  "metadata": {
   "kernelspec": {
-   "display_name": "Python 3",
+   "display_name": "Python 3 (ipykernel)",
    "language": "python",
    "name": "python3"
   },
   "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
    "name": "python",
-   "version": "3.9.7"
-  },
-  "orig_nbformat": 4
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.7"
+  }
  },
  "nbformat": 4,
  "nbformat_minor": 2
