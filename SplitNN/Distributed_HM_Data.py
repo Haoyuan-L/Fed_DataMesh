@@ -1,3 +1,5 @@
+import torch
+
 class Distributed_HM:
     def __init__(self, data_owners, data_loader):
         self.data_owners = data_owners
@@ -14,9 +16,9 @@ class Distributed_HM:
             self.labels.append(label_batch)
 
             # split data batch based on domains
-            sales_domain = [customer_batch, product_batch, sales_channels_batch, prices_batch]
-            customer_domain = [club_status_batch, age_groups_batch]
-            product_domain = [product_groups_batch, color_groups_batch, index_name_batch]
+            sales_domain = [customer_batch.reshape(-1, 1), product_batch.reshape(-1, 1), torch.cat([sales_channels_batch.float().reshape(-1, 1), prices_batch.reshape(-1, 1)], dim=-1)]
+            customer_domain = torch.cat([club_status_batch.float().reshape(-1, 1), age_groups_batch.reshape(-1, 1)], dim=-1)
+            product_domain = [product_groups_batch.reshape(-1, 1), color_groups_batch.reshape(-1, 1), index_name_batch.reshape(-1, 1)]
             
             # set data owners for each domain team
             sales_owner = self.data_owners[0]
