@@ -1,0 +1,12 @@
+num_users: 4402
+num_items: 38186
+num_product_groups: 15
+num_color_groups: 49
+Epoch 000: | Loss: 0.538501
+Epoch 001: | Loss: 0.500626
+Epoch 002: | Loss: 0.500410
+Epoch 003: | Loss: 0.500409
+Epoch 004: | Loss: 0.500408
+Epoch 005: | Loss: 0.500408
+Epoch 006: | Loss: 0.500408
+Epoch 007: | Loss: 0.500408
