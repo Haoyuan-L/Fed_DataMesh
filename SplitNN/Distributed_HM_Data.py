@@ -8,6 +8,7 @@ class Distributed_HM:
 
         self.data_pointer = []
         self.labels = []
+#         self.device = device
 
         # iterate over each batch of dataloader, split data based on domains, sending to VirtualWorker  
         for customer_batch, product_batch, prices_batch, sales_channels_batch, club_status_batch, age_groups_batch, product_groups_batch, color_groups_batch, index_name_batch, label_batch in data_loader:
@@ -16,9 +17,14 @@ class Distributed_HM:
             self.labels.append(label_batch)
 
             # split data batch based on domains
-            sales_domain = [customer_batch.reshape(-1, 1), product_batch.reshape(-1, 1), sales_channels_batch.float().reshape(-1, 1), prices_batch.reshape(-1, 1)]
+            sales_domain = [customer_batch, product_batch, sales_channels_batch.float().reshape(-1, 1), prices_batch.reshape(-1, 1)]
             customer_domain = [club_status_batch.float().reshape(-1, 1), age_groups_batch.reshape(-1, 1)]
-            product_domain = [product_groups_batch.reshape(-1, 1), color_groups_batch.reshape(-1, 1), index_name_batch.reshape(-1, 1)]
+            product_domain = [product_groups_batch, color_groups_batch, index_name_batch]
+            
+#             # Move tensors to the GPU
+#             sales_domain = [tensor.to(self.device) for tensor in sales_domain]
+#             customer_domain = [tensor.to(self.device) for tensor in customer_domain]
+#             product_domain = [tensor.to(self.device) for tensor in product_domain]
             
             # set data owners for each domain team
             sales_owner = self.data_owners[0]
