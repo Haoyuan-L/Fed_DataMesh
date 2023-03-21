@@ -57,10 +57,11 @@ class Distributed_HM:
     def __len__(self):
         return len(self.data_loader)-1
 
-                            
 def binary_acc(y_pred, y_test):
+    acc = 0.0
     y_pred_label = torch.softmax(y_pred, dim=1)
     _, y_pred_label = torch.max(y_pred_label, dim = 1)
     correct_pred = (y_pred_label == y_test).sum()
-    acc = correct_pred/y_test.shape[0]
+    acc = correct_pred.item()/y_test.shape[0]
+    
     return acc 
