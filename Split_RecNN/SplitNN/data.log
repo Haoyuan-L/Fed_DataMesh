@@ -1,0 +1,87 @@
+num_users: 880
+num_items: 16450
+num_product_groups: 13
+num_color_groups: 49
+{'sales_domain': SalesNN(
+  (user_embedding_layer): Embedding(880, 16)
+  (item_embedding_layer): Embedding(16450, 32)
+  (relu): LeakyReLU(negative_slope=0.01)
+  (encoder): Sequential(
+    (0): Linear(in_features=50, out_features=128, bias=True)
+    (1): Linear(in_features=128, out_features=32, bias=True)
+  )
+), 'customer_domain': CustomersNN(
+  (relu): LeakyReLU(negative_slope=0.01)
+  (encoder): Sequential(
+    (0): Linear(in_features=2, out_features=5, bias=True)
+  )
+), 'product_domain': ProductsNN(
+  (product_group_embedding_layer): Embedding(13, 8)
+  (color_group_embedding_layer): Embedding(49, 16)
+  (index_name_embedding_layer): Embedding(10, 6)
+  (relu): LeakyReLU(negative_slope=0.01)
+  (encoder): Sequential(
+    (0): Linear(in_features=30, out_features=64, bias=True)
+    (1): Linear(in_features=64, out_features=16, bias=True)
+  )
+), 'server': GovernanceNN(
+  (relu): LeakyReLU(negative_slope=0.01)
+  (decoder): Sequential(
+    (0): Linear(in_features=53, out_features=128, bias=True)
+    (1): Linear(in_features=128, out_features=64, bias=True)
+    (2): Linear(in_features=64, out_features=2, bias=True)
+  )
+)}
+Epoch 0 - Training loss: 0.506868302822113
+Epoch 1 - Training loss: 0.4997459352016449
+Epoch 2 - Training loss: 0.4940570592880249
+Epoch 3 - Training loss: 0.4782547652721405
+Epoch 4 - Training loss: 0.4522854685783386
+Epoch 5 - Training loss: 0.4221012592315674
+Epoch 6 - Training loss: 0.38992562890052795
+Epoch 7 - Training loss: 0.3610519766807556
+Epoch 8 - Training loss: 0.3289549648761749
+Epoch 9 - Training loss: 0.31193605065345764
+Epoch 10 - Training loss: 0.29608121514320374
+Epoch 11 - Training loss: 0.2773623764514923
+Epoch 12 - Training loss: 0.2674212157726288
+Epoch 13 - Training loss: 0.2551153898239136
+Epoch 14 - Training loss: 0.22609059512615204
+Epoch 15 - Training loss: 0.2294413447380066
+Epoch 16 - Training loss: 0.2221171259880066
+Epoch 17 - Training loss: 0.21319040656089783
+Epoch 18 - Training loss: 0.2100706845521927
+Epoch 19 - Training loss: 0.18862707912921906
+Epoch 20 - Training loss: 0.18608476221561432
+Epoch 21 - Training loss: 0.18993796408176422
+Epoch 22 - Training loss: 0.20717813074588776
+Epoch 23 - Training loss: 0.17389212548732758
+Epoch 24 - Training loss: 0.19141317903995514
+Epoch 25 - Training loss: 0.1752159744501114
+Epoch 26 - Training loss: 0.1469411849975586
+Epoch 27 - Training loss: 0.14786861836910248
+Epoch 28 - Training loss: 0.14435231685638428
+Epoch 29 - Training loss: 0.12899574637413025
+Epoch 30 - Training loss: 0.1414484977722168
+Epoch 31 - Training loss: 0.12137660384178162
+Epoch 32 - Training loss: 0.11135011911392212
+Epoch 33 - Training loss: 0.13877911865711212
+Epoch 34 - Training loss: 0.1278848499059677
+Epoch 35 - Training loss: 0.09598491340875626
+Epoch 36 - Training loss: 0.0910954400897026
+Epoch 37 - Training loss: 0.08584746718406677
+Epoch 38 - Training loss: 0.08312991261482239
+Epoch 39 - Training loss: 0.08116789162158966
+Epoch 40 - Training loss: 0.06992921978235245
+Epoch 41 - Training loss: 0.08298419415950775
+Epoch 42 - Training loss: 0.06776516139507294
+Epoch 43 - Training loss: 0.08352208137512207
+Epoch 44 - Training loss: 0.08339253067970276
+Epoch 45 - Training loss: 0.08924156427383423
+Epoch 46 - Training loss: 0.06148526072502136
+Epoch 47 - Training loss: 0.0593375526368618
+Epoch 48 - Training loss: 0.06343291699886322
+Epoch 49 - Training loss: 0.05812085047364235
+Epoch 50 - Training loss: 0.06591160595417023
+Epoch 51 - Training loss: 0.082392618060112
+Epoch 52 - Training loss: 0.06173582375049591
