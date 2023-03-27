@@ -13,6 +13,7 @@ dependencies:
   - pip >= 19
   - pip:
       - openmined.psi
-      - pytest
       - matplotlib
       - syft==0.2.*
+      - protobuf<3.21.0
+      - tqdm
