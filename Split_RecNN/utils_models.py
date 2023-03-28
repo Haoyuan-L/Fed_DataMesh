@@ -32,9 +32,9 @@ class SalesNN(nn.Module):
                 )
         else:
             raise ValueError
-        self.encoder = nn.Sequential(
-            *[nn.Linear(in_features=in_channels[i], out_features=in_channels[i+1]) for i in range(len(in_channels)-1) if i != len(in_channels)-1]
-        )
+#         self.encoder = nn.Sequential(
+#             *[nn.Linear(in_features=in_channels[i], out_features=in_channels[i+1]) for i in range(len(in_channels)-1) if i != len(in_channels)-1]
+#         )
         
     def forward(self, user_input, item_input, prices, sales_channels):
         user_embedding = self.user_embedding_layer(user_input)
@@ -43,9 +43,9 @@ class SalesNN(nn.Module):
 #         item_embedding = torch.squeeze(item_embedding, dim=1)
         
         latent_vec = torch.cat([user_embedding, item_embedding, prices, sales_channels], dim=-1)
-        for layer in self.encoder:
-            latent_vec = layer(latent_vec)
-            latent_vec = self.relu(latent_vec)
+#         for layer in self.encoder:
+#             latent_vec = layer(latent_vec)
+#             latent_vec = self.relu(latent_vec)
         
         return latent_vec
     
@@ -124,9 +124,9 @@ class ProductsNN(nn.Module):
                 )
         else:
             raise ValueError
-        self.encoder = nn.Sequential(
-            *[nn.Linear(in_features=in_channels[i], out_features=in_channels[i+1]) for i in range(len(in_channels)-1) if i != len(in_channels)-1]
-        )
+#         self.encoder = nn.Sequential(
+#             *[nn.Linear(in_features=in_channels[i], out_features=in_channels[i+1]) for i in range(len(in_channels)-1) if i != len(in_channels)-1]
+#         )
         
     def forward(self, product_groups, color_groups, index_name):
         product_group_embedding = self.product_group_embedding_layer(product_groups)
@@ -138,9 +138,9 @@ class ProductsNN(nn.Module):
         
         latent_vec = torch.cat([product_group_embedding, color_group_embedding, index_name_embedding], dim=-1)
         
-        for layer in self.encoder:
-            latent_vec = layer(latent_vec)
-            latent_vec = self.relu(latent_vec)
+#         for layer in self.encoder:
+#             latent_vec = layer(latent_vec)
+#             latent_vec = self.relu(latent_vec)
         
         return latent_vec
     
