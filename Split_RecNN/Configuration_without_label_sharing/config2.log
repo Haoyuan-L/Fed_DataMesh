@@ -1,0 +1,155 @@
+num_users: 880
+num_items: 16450
+num_product_groups: 13
+num_color_groups: 49
+{'sales_domain': SalesNN(
+  (user_embedding_layer): Embedding(880, 16)
+  (item_embedding_layer): Embedding(16450, 32)
+  (relu): LeakyReLU(negative_slope=0.01)
+), 'customer_domain': CustomersNN(
+  (relu): LeakyReLU(negative_slope=0.01)
+  (encoder): Sequential(
+    (0): Linear(in_features=2, out_features=5, bias=True)
+  )
+), 'product_domain': ProductsNN(
+  (product_group_embedding_layer): Embedding(13, 8)
+  (color_group_embedding_layer): Embedding(49, 16)
+  (index_name_embedding_layer): Embedding(10, 6)
+  (relu): LeakyReLU(negative_slope=0.01)
+), 'server': GovernanceNN(
+  (relu): LeakyReLU(negative_slope=0.01)
+  (decoder): Sequential(
+    (0): Linear(in_features=85, out_features=128, bias=True)
+    (1): Linear(in_features=128, out_features=64, bias=True)
+  )
+), 'label_owner': LabelOwner(
+  (lin): Linear(in_features=64, out_features=2, bias=True)
+)}
+Epoch 0 - Training loss: 0.5059341788291931
+Epoch 1 - Training loss: 0.497627854347229
+Epoch 2 - Training loss: 0.48744991421699524
+Epoch 3 - Training loss: 0.4636206328868866
+Epoch 4 - Training loss: 0.42149466276168823
+Epoch 5 - Training loss: 0.3706291913986206
+Epoch 6 - Training loss: 0.32205793261528015
+Epoch 7 - Training loss: 0.28157714009284973
+Epoch 8 - Training loss: 0.24686738848686218
+Epoch 9 - Training loss: 0.21809989213943481
+Epoch 10 - Training loss: 0.19156703352928162
+Epoch 11 - Training loss: 0.1710832118988037
+Epoch 12 - Training loss: 0.15468144416809082
+Epoch 13 - Training loss: 0.14562587440013885
+Epoch 14 - Training loss: 0.13707078993320465
+Epoch 15 - Training loss: 0.12318377941846848
+Epoch 16 - Training loss: 0.11239529401063919
+Epoch 17 - Training loss: 0.1004195511341095
+Epoch 18 - Training loss: 0.08794320374727249
+Epoch 19 - Training loss: 0.07892823964357376
+Epoch 20 - Training loss: 0.07245215028524399
+Epoch 21 - Training loss: 0.06507371366024017
+Epoch 22 - Training loss: 0.05846021696925163
+Epoch 23 - Training loss: 0.05173328518867493
+Epoch 24 - Training loss: 0.0463188961148262
+Epoch 25 - Training loss: 0.04411463066935539
+Epoch 26 - Training loss: 0.04067809507250786
+Epoch 27 - Training loss: 0.03673743084073067
+Epoch 28 - Training loss: 0.033223189413547516
+Epoch 29 - Training loss: 0.027795905247330666
+Epoch 30 - Training loss: 0.021969253197312355
+Epoch 31 - Training loss: 0.017171796411275864
+Epoch 32 - Training loss: 0.013577394187450409
+Epoch 33 - Training loss: 0.010040920227766037
+Epoch 34 - Training loss: 0.007157774176448584
+Epoch 35 - Training loss: 0.005420283414423466
+Epoch 36 - Training loss: 0.0033176993019878864
+Epoch 37 - Training loss: 0.0021942048333585262
+Epoch 38 - Training loss: 0.0017300943145528436
+Epoch 39 - Training loss: 0.001389195560477674
+Epoch 40 - Training loss: 0.0012025797041133046
+Epoch 41 - Training loss: 0.001013477798551321
+Epoch 42 - Training loss: 0.0009744848939590156
+Epoch 43 - Training loss: 0.000993023393675685
+Epoch 44 - Training loss: 0.000985489459708333
+Epoch 45 - Training loss: 0.0009074022527784109
+Epoch 46 - Training loss: 0.0008716610609553754
+Epoch 47 - Training loss: 0.0008596827392466366
+Epoch 48 - Training loss: 0.0007942665833979845
+Epoch 49 - Training loss: 0.0008145967149175704
+Epoch 50 - Training loss: 0.0007714297389611602
+Epoch 51 - Training loss: 0.0007277877884916961
+Epoch 52 - Training loss: 0.0007685252930969
+Epoch 53 - Training loss: 0.0007456277962774038
+Epoch 54 - Training loss: 0.0007877645548433065
+Epoch 55 - Training loss: 0.0019402498146519065
+Epoch 56 - Training loss: 0.02033606916666031
+Epoch 57 - Training loss: 0.025176318362355232
+Epoch 58 - Training loss: 0.014092215336859226
+Epoch 59 - Training loss: 0.008269503712654114
+Epoch 60 - Training loss: 0.0045728981494903564
+Epoch 61 - Training loss: 0.003099675988778472
+Epoch 62 - Training loss: 0.0017281759064644575
+Epoch 63 - Training loss: 0.0014392577577382326
+Epoch 64 - Training loss: 0.0009350557229481637
+Epoch 65 - Training loss: 0.0006873863749206066
+Epoch 66 - Training loss: 0.0006105255451984704
+Epoch 67 - Training loss: 0.0005288147367537022
+Epoch 68 - Training loss: 0.0005306215025484562
+Epoch 69 - Training loss: 0.0005112054641358554
+Epoch 70 - Training loss: 0.0004919201601296663
+Epoch 71 - Training loss: 0.0005237158038653433
+Epoch 72 - Training loss: 0.0005111393984407187
+Epoch 73 - Training loss: 0.000499504734762013
+Epoch 74 - Training loss: 0.0005929730250500143
+Epoch 75 - Training loss: 0.0005499064573086798
+Epoch 76 - Training loss: 0.0007788328221067786
+Epoch 77 - Training loss: 0.001372318365611136
+Epoch 78 - Training loss: 0.005504034459590912
+Epoch 79 - Training loss: 0.016248302534222603
+Epoch 80 - Training loss: 0.01374571118503809
+Epoch 81 - Training loss: 0.007220951374620199
+Epoch 82 - Training loss: 0.003187255933880806
+Epoch 83 - Training loss: 0.0017804030794650316
+Epoch 84 - Training loss: 0.0010590965393930674
+Epoch 85 - Training loss: 0.0008314842125400901
+Epoch 86 - Training loss: 0.0006410033092834055
+Epoch 87 - Training loss: 0.000552922545466572
+Epoch 88 - Training loss: 0.0006086333887651563
+Epoch 89 - Training loss: 0.00045440721441991627
+Epoch 90 - Training loss: 0.00043668242869898677
+Epoch 91 - Training loss: 0.0004230756312608719
+Epoch 92 - Training loss: 0.0004153705667704344
+Epoch 93 - Training loss: 0.00040086216176860034
+Epoch 94 - Training loss: 0.00037297458038665354
+Epoch 95 - Training loss: 0.0005276774172671139
+Epoch 96 - Training loss: 0.0003805393062066287
+Epoch 97 - Training loss: 0.00040702999103814363
+Epoch 98 - Training loss: 0.00036663186619989574
+Epoch 99 - Training loss: 0.00040021035238169134
+Epoch 100 - Training loss: 0.00039585292688570917
+Epoch 101 - Training loss: 0.000391412089811638
+Epoch 102 - Training loss: 0.0004494983295444399
+Epoch 103 - Training loss: 0.00039608567021787167
+Epoch 104 - Training loss: 0.0004886169917881489
+Epoch 105 - Training loss: 0.0003898069844581187
+Epoch 106 - Training loss: 0.0005734397564083338
+Epoch 107 - Training loss: 0.01540115661919117
+Epoch 108 - Training loss: 0.01911519281566143
+Epoch 109 - Training loss: 0.007296738214790821
+Epoch 110 - Training loss: 0.0028662728145718575
+Epoch 111 - Training loss: 0.0010938874911516905
+Epoch 112 - Training loss: 0.0005798077909275889
+Epoch 113 - Training loss: 0.00033936515683308244
+Epoch 114 - Training loss: 0.0002817954809870571
+Epoch 115 - Training loss: 0.0002589296200312674
+Epoch 116 - Training loss: 0.0002729047555476427
+Epoch 117 - Training loss: 0.00023695729032624513
+Epoch 118 - Training loss: 0.0002671501424629241
+Epoch 119 - Training loss: 0.0002693728019949049
+Accuracy on dataset Test set is (87.7%)
+num_users: 880
+num_items: 16450
+num_product_groups: 13
+num_color_groups: 49
+WARNING:root:Torch was already hooked... skipping hooking process
+Accuracy on dataset Test set is (87.1%)
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
