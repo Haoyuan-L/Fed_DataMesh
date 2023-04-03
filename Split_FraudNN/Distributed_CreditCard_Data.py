@@ -22,10 +22,10 @@ class CreditCardDataLoader(Dataset):
     
     def __getitem__(self, idx):
         return (
-            torch.tensor(self.digital_transaction.iloc[idx].values, dtype=torch.float32),
-            torch.tensor(self.retail_transaction.iloc[idx].values, dtype=torch.float32),
-            torch.tensor(self.fraud_prevention.iloc[idx].values, dtype=torch.float32),
-            torch.tensor(self.label.iloc[idx], dtype=torch.float32)
+            torch.tensor(self.digital_transaction[idx], dtype=torch.float32),
+            torch.tensor(self.retail_transaction[idx], dtype=torch.float32),
+            torch.tensor(self.fraud_prevention[idx], dtype=torch.float32),
+            torch.tensor(self.label[idx], dtype=torch.float32)
         )
 
 # distribute credit card data for each data owner of domain
