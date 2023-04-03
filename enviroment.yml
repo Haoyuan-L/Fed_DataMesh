@@ -19,3 +19,4 @@ dependencies:
       - tqdm
       - sklearn
       - imbalanced-learn
+      - seaborn
