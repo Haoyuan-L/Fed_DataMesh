@@ -25,7 +25,7 @@ class CreditCardDataLoader(Dataset):
             torch.tensor(self.digital_transaction[idx], dtype=torch.float32),
             torch.tensor(self.retail_transaction[idx], dtype=torch.float32),
             torch.tensor(self.fraud_prevention[idx], dtype=torch.float32),
-            torch.tensor(self.label[idx], dtype=torch.float32)
+            torch.tensor(self.label[idx], dtype=torch.long)
         )
 
 # distribute credit card data for each data owner of domain
@@ -43,9 +43,9 @@ class Distributed_CreditCard:
         for digital_transaction_batch, retail_transaction_batch, fraud_prevention_batch, label_batch in data_loader:
             curr_data_dict = {}
             self.labels.append(label_batch)
-            digital_part_ptr = digital_transaction_batch.send(data_owner)
-            retail_part_ptr = retail_transaction_batch.send(data_owner)
-            fraud_part_ptr = fraud_prevention_batch.send(data_owner)
+            digital_part_ptr = digital_transaction_batch.send(self.data_owners[0])
+            retail_part_ptr = retail_transaction_batch.send(self.data_owners[1])
+            fraud_part_ptr = fraud_prevention_batch.send(self.data_owners[2])
             data_part_ptr = [digital_part_ptr, retail_part_ptr, fraud_part_ptr]
             # send data to data owner
             for i, data_owner in enumerate(self.data_owners):         
