@@ -1,0 +1,97 @@
+{'digital_domain': DigitalNN(
+  (layers_stack): Sequential(
+    (0): Linear(in_features=10, out_features=32, bias=True)
+    (1): ReLU()
+    (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=32, out_features=16, bias=True)
+    (5): ReLU()
+  )
+), 'retail_domain': RetailNN(
+  (layers_stack): Sequential(
+    (0): Linear(in_features=10, out_features=32, bias=True)
+    (1): ReLU()
+    (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Dropout(p=0.3, inplace=False)
+    (4): Linear(in_features=32, out_features=16, bias=True)
+    (5): ReLU()
+  )
+), 'fraud_prevention_domain': FraudPrevNN(
+  (layers_stack): Sequential(
+    (0): Linear(in_features=10, out_features=32, bias=True)
+    (1): ReLU()
+    (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Linear(in_features=32, out_features=16, bias=True)
+    (4): ReLU()
+  )
+), 'server': GovernanceNN(
+  (layers_stack): Sequential(
+    (0): Linear(in_features=48, out_features=32, bias=True)
+    (1): ReLU()
+    (2): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (3): Linear(in_features=32, out_features=32, bias=True)
+    (4): ReLU()
+    (5): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  )
+), 'label_owner': LabelOwnerNN(
+  (out): Linear(in_features=32, out_features=2, bias=True)
+)}
+Epoch 0 - Training loss: 0.654209554195404
+Epoch 1 - Training loss: 0.34311479330062866
+Epoch 2 - Training loss: 0.15206921100616455
+Epoch 3 - Training loss: 0.08051362633705139
+Epoch 4 - Training loss: 0.05404144152998924
+Epoch 5 - Training loss: 0.04013703763484955
+Epoch 6 - Training loss: 0.03345117345452309
+Epoch 7 - Training loss: 0.02787947468459606
+Epoch 8 - Training loss: 0.024806074798107147
+Epoch 9 - Training loss: 0.021849555894732475
+Epoch 10 - Training loss: 0.01924460008740425
+Epoch 11 - Training loss: 0.017967060208320618
+Epoch 12 - Training loss: 0.016465742141008377
+Epoch 13 - Training loss: 0.015761742368340492
+Epoch 14 - Training loss: 0.014545582234859467
+Epoch 15 - Training loss: 0.01408467162400484
+Epoch 16 - Training loss: 0.013435633853077888
+Epoch 17 - Training loss: 0.012758583761751652
+Epoch 18 - Training loss: 0.012124480679631233
+Epoch 19 - Training loss: 0.011659428477287292
+Epoch 20 - Training loss: 0.010930277407169342
+Epoch 21 - Training loss: 0.010907305404543877
+Epoch 22 - Training loss: 0.010491833090782166
+Epoch 23 - Training loss: 0.009839647449553013
+Epoch 24 - Training loss: 0.009596186690032482
+Epoch 25 - Training loss: 0.009429062716662884
+Epoch 26 - Training loss: 0.008795415982604027
+Epoch 27 - Training loss: 0.008894534781575203
+Epoch 28 - Training loss: 0.008421485312283039
+Epoch 29 - Training loss: 0.008141394704580307
+Epoch 30 - Training loss: 0.008236863650381565
+Epoch 31 - Training loss: 0.007523069623857737
+Epoch 32 - Training loss: 0.00739203579723835
+Epoch 33 - Training loss: 0.007334347814321518
+Epoch 34 - Training loss: 0.0072672488167881966
+Accuracy on dataset Test set is (1e+02%)
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     85292
+           1       0.87      0.84      0.86       148
+
+    accuracy                           1.00     85440
+   macro avg       0.94      0.92      0.93     85440
+weighted avg       1.00      1.00      1.00     85440
+
+ROC AUC Score:  0.9221917774361147
+WARNING:root:Torch was already hooked... skipping hooking process
+Accuracy on dataset Test set is (1e+02%)
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00     85292
+           1       0.87      0.84      0.86       148
+
+    accuracy                           1.00     85440
+   macro avg       0.94      0.92      0.93     85440
+weighted avg       1.00      1.00      1.00     85440
+
+ROC AUC Score:  0.9221917774361147
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
