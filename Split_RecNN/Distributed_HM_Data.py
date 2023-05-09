@@ -10,26 +10,26 @@ class HMSaleTrainDataLoader(Dataset):
         transactions (pd.DataFrame): Dataframe of transaction records
         all_products_id (list): A list contains all product ids
     """
-    def __init__(self, transactions, all_products_id):
+    def __init__(self, transactions, all_products_id, all_customer_product_set):
         self.customers, self.products, self.club_status, self.age_groups, self.product_groups, self.color_groups, \
-        self.index_name, self.labels = self.get_dataset(transactions, all_products_id)
+        self.index_name, self.labels = self.get_dataset(transactions, all_products_id, all_customer_product_set)
 
     def __len__(self):
         return len(self.customers)
     
     def __getitem__(self, idx):
-        return self.customers[idx], self.products[idx], self.club_status[idx], \
-               self.age_groups[idx], self.product_groups[idx], self.color_groups[idx], self.index_name[idx], self.labels[idx]
+        return self.customers[idx], self.products[idx], self.club_status[idx], self.age_groups[idx], self.product_groups[idx], \
+        self.color_groups[idx], self.index_name[idx], self.labels[idx]
     
-    def get_dataset(self, transactions, all_products_id):
+    def get_dataset(self, transactions, all_products_id, all_customer_product_set):
         customers, products, club_status, age_groups, product_groups, color_groups, index_name, labels  = [], [], [], [], [], [], [], []
-        customer_product_set = set(zip(transactions["customer_id"], transactions["article_id"], 
-                                       transactions["club_member_status"], transactions["age"], 
-                                       transactions["product_group_name"], transactions["colour_group_name"], transactions["index_name"]))
         
         """negative sampling"""
         # set up negative:positive ratio as 4:1
-        negative_samples = 4
+        negative_samples = 5
+        customer_product_set = set(zip(transactions["customer_id"], transactions["article_id"], 
+                                       transactions["club_member_status"], transactions["age"], 
+                                       transactions["product_group_name"], transactions["colour_group_name"], transactions["index_name"]))
 
         for u, i, club, age, product, color, index in tqdm(customer_product_set):
             customers.append(u)
@@ -42,7 +42,7 @@ class HMSaleTrainDataLoader(Dataset):
             labels.append(1)
             for _ in range(negative_samples):
                 negative_product = np.random.choice(all_products_id)
-                while (u, negative_product, club, age, product, color, index) in customer_product_set:
+                while (u, negative_product, club, age, product, color, index) in all_customer_product_set:
                     negative_product = np.random.choice(all_products_id)
                 customers.append(u)
                 products.append(negative_product)
@@ -52,18 +52,8 @@ class HMSaleTrainDataLoader(Dataset):
                 color_groups.append(color)
                 index_name.append(index)
                 labels.append(0)
-        
-        customers = torch.tensor(customers)
-        products = torch.tensor(products)
-        club_status = torch.tensor(club_status)
-        age_groups = torch.tensor(age_groups)
-        product_groups = torch.tensor(product_groups)
-        color_groups = torch.tensor(color_groups)
-        index_name = torch.tensor(index_name)
-        labels = torch.tensor(labels)
-        
-        return customers, products, club_status, age_groups, product_groups, color_groups, index_name, labels
-
+        return customers, products, club_status, age_groups, product_groups, color_groups, index_name, torch.tensor(labels)
+    
 class Distributed_HM:
     def __init__(self, data_owners, data_loader):
         self.data_owners = data_owners
@@ -82,19 +72,13 @@ class Distributed_HM:
 
             # split data batch based on domains
             sales_domain = [customer_batch, product_batch]
-            customer_domain = [club_status_batch.float().reshape(-1, 1), age_groups_batch.reshape(-1, 1)]
+            customer_domain = [club_status_batch.float().reshape(-1, 1), age_groups_batch.float().reshape(-1, 1)]
             product_domain = [product_groups_batch, color_groups_batch, index_name_batch]
-            
-#             # Move tensors to the GPU
-#             sales_domain = [tensor.to(self.device) for tensor in sales_domain]
-#             customer_domain = [tensor.to(self.device) for tensor in customer_domain]
-#             product_domain = [tensor.to(self.device) for tensor in product_domain]
             
             # set data owners for each domain team
             sales_owner = self.data_owners[0]
             customer_owner = self.data_owners[1]
             product_owner = self.data_owners[2]
-            
             
             # send split data to VirtualWorkers and add the data pointer to the dict
             sales_part_ptr = []
@@ -111,6 +95,7 @@ class Distributed_HM:
             for tensor in product_domain:
                 product_part_ptr.append(tensor.send(product_owner))
             curr_data_dict[product_owner.id] = product_part_ptr
+
 
             self.data_pointer.append(curr_data_dict)
 
