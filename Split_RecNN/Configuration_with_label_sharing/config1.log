@@ -1,317 +1,291 @@
-[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
-s: 49
-OrderedDict([('user_embedding_layer.weight', tensor([[-1.7579, -1.7165,  0.2599,  ..., -0.5478,  1.2784, -0.0665],
-        [ 0.0118,  0.3026,  0.5534,  ...,  0.5910, -0.2702,  0.2277],
-        [ 0.0235, -1.2699, -1.0637,  ..., -0.1764, -0.3490,  0.5225],
-        ...,
-        [-0.1349, -0.6884,  1.2037,  ...,  0.6722,  1.1997, -0.0601],
-        [ 0.3599,  0.0904, -2.1772,  ...,  0.5212,  1.3992,  0.2837],
-        [ 0.6548, -1.1735, -0.1056,  ...,  0.0723, -1.3547,  1.0241]])), ('item_embedding_layer.weight', tensor([[-0.3329,  0.4583,  0.3010,  ...,  0.7664, -0.8303,  0.3522],
-        [-1.2361,  0.1548,  2.2680,  ...,  0.4386,  0.4047, -0.6644],
-        [ 0.2227,  1.8626, -2.2245,  ..., -0.3952, -0.4385, -0.6690],
-        ...,
-        [-0.5576,  0.6416, -0.2545,  ..., -1.4302,  1.1244, -0.1329],
-        [-1.7545, -0.2886, -0.2520,  ..., -0.3235, -0.3648, -1.1586],
-        [ 2.0036, -0.0974, -0.4583,  ..., -0.9719,  0.0235, -0.9348]]))])
-OrderedDict([('encoder.0.weight', tensor([[-0.1143, -0.1430],
-        [ 0.2979,  0.4272],
-        [ 0.6826,  0.7686],
-        [ 0.6218, -0.1964],
-        [-0.3810,  0.5802]])), ('encoder.0.bias', tensor([ 0.8593, -0.8585,  0.0153, -1.1287, -0.8256]))])
-OrderedDict([('product_group_embedding_layer.weight', tensor([[ 4.5353e-01, -5.6740e-02, -1.3906e-01, -1.2903e+00, -9.1377e-01,
-         -2.1030e+00, -2.5679e+00, -1.1733e-03],
-        [-3.4774e-01,  1.0942e-01, -1.2462e-01, -9.5164e-01, -9.2784e-01,
-         -1.4327e+00,  1.1380e+00,  2.1908e-01],
-        [ 5.7509e-01, -2.5052e+00, -1.0846e+00, -3.0185e-01,  1.3273e+00,
-         -2.5418e+00,  5.9185e-01, -9.2655e-01],
-        [ 6.5604e-01, -8.2789e-01,  3.4244e-01, -2.4388e+00,  6.4738e-02,
-          2.5453e-01,  1.5802e-01,  2.3031e-01],
-        [-1.1628e+00, -3.3083e-01,  1.8686e+00, -2.5174e-01, -2.3982e+00,
-         -1.9163e+00, -4.1691e-01,  8.6821e-01],
-        [ 1.4356e+00, -5.9537e-01,  1.6337e+00,  9.1215e-02,  1.2252e+00,
-         -1.8795e+00, -1.2336e-01,  1.5204e+00],
-        [-1.6469e+00, -1.2072e+00,  1.4027e+00,  2.2052e-01,  2.8081e-01,
-         -1.6766e+00, -2.8929e-01, -4.9255e-01],
-        [ 3.9870e-01, -2.5444e+00, -2.9278e-01, -2.1621e-02, -1.7118e+00,
-          4.2342e-01, -4.8386e-01,  1.8085e+00],
-        [ 2.4295e-01, -2.2740e+00,  1.4655e+00, -7.2977e-01,  8.7535e-01,
-         -2.2806e-01,  1.8508e+00,  3.5901e-02],
-        [ 1.7749e+00,  7.0724e-01,  5.6439e-01, -4.9728e-02, -6.5823e-01,
-         -1.2107e+00, -7.0962e-01, -3.0519e-01],
-        [-1.0961e+00, -5.6251e-01,  1.2119e-01,  6.0273e-01,  2.0368e+00,
-         -1.2078e+00,  3.0530e+00,  1.4728e+00],
-        [ 2.5831e+00, -1.4270e+00, -1.0610e+00, -7.6428e-01, -1.1399e+00,
-         -8.7695e-02,  4.2941e-01,  4.8078e-01],
-        [ 3.0141e-01, -9.6510e-01,  5.7219e-01,  1.4722e+00,  2.2503e+00,
-          1.5399e-01,  7.7532e-02,  2.1229e-01]])), ('color_group_embedding_layer.weight', tensor([[-3.3028e-01, -6.0053e-01, -2.8486e-01,  1.3061e+00, -6.0095e-01,
-          4.3063e-01, -3.8836e-02,  1.2575e-01,  1.2263e+00,  1.7021e+00,
-          2.4262e-01,  8.0333e-01, -1.9626e-01,  2.3882e-01, -1.3671e+00,
-         -5.1001e-01],
-        [ 4.9138e-01,  1.8014e-01, -7.3061e-01, -1.5912e+00,  6.2544e-02,
-          2.6372e+00,  6.5003e-01, -3.9858e-01, -8.5870e-01,  2.4998e-01,
-         -7.6463e-02,  5.5330e-01, -9.7377e-01, -2.2836e+00,  3.5672e-01,
-         -8.2663e-01],
-        [-6.9986e-02, -5.6367e-01, -1.0373e+00,  1.4264e+00, -1.9005e-01,
-         -8.3354e-01, -8.3588e-01, -1.8981e-02,  5.0640e-01, -4.3885e-01,
-          3.6427e-01, -1.3431e+00, -1.5715e+00, -7.4022e-01,  7.5065e-01,
-         -4.2262e-01],
-        [ 2.1139e+00, -2.1036e-01,  2.0668e+00,  1.0082e+00,  8.1988e-01,
-         -1.1377e+00,  1.5239e+00,  5.5364e-01, -1.0854e+00, -1.1910e+00,
-         -7.6028e-01, -1.3121e+00, -5.6940e-02, -6.3469e-01,  8.6089e-01,
-          1.3042e+00],
-        [ 3.6553e-01, -7.7364e-02,  8.2414e-01, -2.0855e-01,  3.4440e-01,
-         -7.7107e-02,  5.6241e-01, -4.3286e-01, -3.1018e-01, -1.4267e+00,
-         -5.5721e-01, -1.6141e+00, -1.3857e+00, -4.0191e-01,  3.7615e-01,
-          5.4270e-01],
-        [ 2.1103e+00,  9.0628e-01,  3.8954e-02, -1.0284e+00, -1.3695e-01,
-          7.1862e-01, -2.1401e+00, -4.5626e-01, -1.3456e-01,  7.0359e-01,
-         -8.0272e-01, -1.8600e+00, -1.5918e-01,  9.4438e-01, -7.8215e-01,
-          8.1074e-01],
-        [ 1.6726e+00,  3.3972e+00,  3.9314e-01,  3.9422e-01, -9.5142e-01,
-         -1.4307e+00,  1.9381e+00,  8.5377e-01, -1.3923e+00,  1.0929e+00,
-         -4.5651e-01,  1.0820e+00,  1.3293e+00,  8.1943e-01,  1.2072e+00,
-         -1.7669e+00],
-        [-1.3100e+00,  4.6828e-01,  1.0897e-01, -4.8308e-01, -4.4379e-01,
-          9.7765e-01,  1.1241e+00,  1.1725e+00,  6.3385e-01,  3.8872e-01,
-          3.6211e-01, -1.1983e+00,  3.6872e-01, -5.9573e-01,  1.8605e+00,
-         -1.7953e-01],
-        [ 3.9174e-02,  9.2902e-01, -5.0004e-01,  2.8568e+00, -1.0832e-01,
-          8.3221e-01, -6.9150e-01, -1.8304e-01,  4.2242e-01,  1.0430e+00,
-         -1.0868e+00,  1.2045e+00, -3.3379e-01, -1.6195e+00,  7.8339e-01,
-          1.0278e+00],
-        [ 3.9148e-01,  6.4124e-01,  2.4705e+00,  3.0941e+00, -3.9236e-01,
-          1.9381e+00, -2.8618e-02,  1.2146e+00, -9.1901e-01, -2.1837e-01,
-         -4.2319e-01,  3.0981e-01, -4.5420e-02,  1.2186e+00,  4.1783e-01,
-          1.4091e+00],
-        [ 3.5002e-01,  4.2684e-01, -7.8722e-01, -2.9687e-01, -8.2024e-02,
-          1.3527e+00,  2.4964e-01, -3.1064e+00,  5.8261e-01,  6.9455e-01,
-         -2.6629e-01, -6.5667e-01,  1.2959e+00, -1.4917e+00, -2.4058e+00,
-         -4.7376e-01],
-        [ 1.2241e+00, -7.0024e-01,  6.2054e-02,  6.0210e-01, -1.7960e+00,
-         -8.4609e-01,  2.0946e-01, -1.1874e-01, -2.0576e+00, -4.6712e-01,
-          4.4302e-01, -6.2431e-01, -7.9884e-01,  1.9191e+00,  5.4022e-01,
-          1.3734e+00],
-        [ 7.0457e-01,  1.1336e+00, -3.1203e-01,  1.5085e+00,  2.3319e+00,
-          3.5668e-01, -9.4790e-01, -2.1953e+00,  1.1275e-01, -9.8641e-01,
-         -6.1073e-01, -2.4838e-01, -1.2891e+00, -1.8163e+00,  6.6060e-01,
-          1.3316e+00],
-        [ 1.9337e+00,  3.0993e-01, -1.9472e-01, -9.8258e-01,  1.7418e+00,
-         -1.9349e+00, -3.5534e-01, -1.5227e+00, -6.1929e-01,  1.5441e+00,
-         -1.2855e+00, -1.0384e+00, -4.8150e-01, -1.1397e+00,  1.7318e+00,
-         -1.5856e+00],
-        [ 3.5094e-01,  2.2176e+00,  7.4863e-02,  1.8872e+00, -1.3577e+00,
-          2.8594e-01,  7.8394e-01, -2.2845e+00,  2.2407e+00,  4.3942e-01,
-          6.8174e-03,  4.5024e-01,  1.1706e-02,  6.6078e-01, -4.6678e-01,
-          2.5809e-01],
-        [-6.8221e-01,  4.2051e-01, -2.1592e+00, -3.9030e-01,  1.2912e+00,
-         -5.7303e-01,  1.2684e+00, -1.1426e-01,  3.1687e-01,  1.5951e+00,
-         -2.3190e+00, -2.5160e+00, -5.7700e-03,  9.8990e-01,  9.8772e-01,
-          4.3865e-02],
-        [ 9.9349e-01,  4.5361e-01,  2.8157e-01, -1.5739e+00,  1.6291e+00,
-          9.9228e-01,  2.8039e+00,  1.5691e+00, -1.5730e+00, -9.7862e-02,
-          4.7905e-02, -3.3750e-01,  4.7356e-01, -1.7106e+00,  6.3488e-01,
-         -1.0029e+00],
-        [-8.8955e-01,  1.2567e+00,  5.2261e-01,  4.6840e-01,  2.1627e-01,
-         -2.3925e+00,  5.8536e-01,  1.4374e-01,  9.8863e-01,  1.6337e+00,
-         -1.5674e+00,  7.9019e-01, -2.8673e-01,  1.9195e+00,  5.9101e-01,
-          1.5116e+00],
-        [ 1.1348e+00,  1.1048e+00, -1.6877e+00, -9.8429e-01,  2.2096e-01,
-         -2.4129e-01, -1.6096e+00,  2.4893e+00,  5.1822e-01, -2.4636e-01,
-         -7.9452e-01,  4.3965e-02, -1.3451e-01,  3.4204e-02, -9.5107e-01,
-          1.2103e+00],
-        [ 1.7676e+00, -7.2460e-01, -3.6243e-02, -3.3159e-01,  8.3752e-01,
-         -1.5080e+00, -1.3378e+00, -2.9429e-01, -2.9154e-01,  9.2287e-01,
-         -9.2303e-01, -4.1850e-01, -1.6839e-01,  1.1514e+00, -4.0158e-01,
-          7.2376e-01],
-        [-1.8293e+00, -3.8167e-03, -7.6415e-01,  4.7257e-01,  1.2723e-01,
-         -1.4807e+00,  1.8177e+00,  8.1310e-01, -6.4621e-01,  5.3930e-01,
-          2.0502e+00, -1.6547e+00,  4.8737e-01,  5.6475e-01,  9.5520e-02,
-         -4.4010e-01],
-        [ 7.3704e-01, -8.4483e-02,  1.3568e+00, -1.9018e+00, -1.8559e+00,
-          3.1374e-01,  1.5033e+00, -1.9311e+00,  1.0293e+00, -1.4444e+00,
-         -1.7681e+00, -1.3470e+00, -9.8733e-01,  4.1809e-01, -1.6369e-01,
-          2.1492e-01],
-        [ 6.5127e-01, -3.0369e+00, -1.2539e-01, -9.9648e-01,  2.3747e-01,
-          1.8742e-01,  1.3806e+00, -2.8024e-01, -1.6786e+00,  2.1662e-01,
-          1.2778e+00,  4.6717e-02, -1.3531e+00,  1.3452e+00, -1.2216e+00,
-          8.0639e-02],
-        [-1.3834e+00,  2.0601e+00, -4.9072e-01, -2.4484e-01,  9.8381e-01,
-          4.0051e-02,  4.5447e-01,  2.8946e-01,  8.2715e-01, -2.5283e+00,
-          1.2812e+00, -3.1275e-01,  6.6287e-01,  1.0238e+00, -2.0729e+00,
-         -1.7368e+00],
-        [-1.2986e-01,  9.7856e-01, -1.9622e+00,  2.1679e+00, -6.4177e-01,
-          1.3221e-01,  5.1838e-01,  2.9626e-01,  1.4221e+00, -2.1814e-01,
-         -1.5212e+00, -1.7400e-01, -7.5095e-01,  1.9634e+00,  1.2007e+00,
-          1.6225e+00],
-        [-1.8087e+00, -2.2990e-01,  1.5398e+00, -8.8788e-01,  1.5169e+00,
-         -8.6879e-01,  1.1713e+00, -2.3398e-01, -1.1540e+00, -9.8888e-01,
-          2.2100e-01,  2.2199e-01,  8.1741e-01,  6.0251e-01,  7.4134e-01,
-          1.6433e-02],
-        [ 9.2035e-01, -3.3447e-01,  1.4793e+00, -1.1261e+00,  1.5367e+00,
-         -1.2182e+00, -1.4117e-01,  5.8272e-01, -5.8006e-01, -8.4145e-01,
-          1.4080e+00, -6.0311e-01, -1.0360e-01,  1.9868e+00, -1.9969e-01,
-          1.8841e+00],
-        [ 5.2641e-01, -1.8848e-01,  8.5203e-01,  1.6053e+00, -1.8315e+00,
-          1.0872e+00, -7.6505e-01,  1.2071e+00, -1.1261e+00, -2.5664e-01,
-         -3.0188e-01,  4.1552e-01,  5.5949e-01,  8.5312e-01, -6.7206e-01,
-          6.9669e-02],
-        [ 9.6375e-01,  1.4323e+00,  1.9409e-02, -5.1148e-01, -1.8600e+00,
-         -1.2188e+00,  8.7948e-01, -2.3120e-01,  9.6252e-01, -1.7001e+00,
-          4.1548e-01,  7.3384e-01,  5.5860e-01,  7.9580e-02, -7.2139e-01,
-          2.8968e-02],
-        [-1.1103e+00, -2.1180e-01, -1.4733e+00, -2.0333e+00,  2.0664e-01,
-         -6.9202e-01, -3.0226e-02,  5.5217e-01, -1.5183e-01, -1.2214e-01,
-          1.9912e+00,  4.0497e-01,  6.8060e-02, -8.7257e-01, -1.5471e+00,
-         -1.3482e+00],
-        [ 1.7887e+00,  1.1634e-01, -3.3466e-01,  1.5469e+00, -6.4466e-01,
-          4.4725e-01,  6.7488e-01, -1.9475e+00, -9.8898e-02, -9.8326e-01,
-         -7.4241e-02, -7.9724e-01,  9.1475e-01, -1.4297e-01,  5.8829e-02,
-          1.2288e+00],
-        [ 6.0468e-01, -2.0200e-01, -1.8675e+00, -5.8475e-01,  4.1757e-01,
-          3.3930e-01,  2.0451e+00, -2.2001e+00, -2.4888e-01, -3.9506e-01,
-         -2.9090e+00, -4.9746e-01, -5.6357e-01,  8.7614e-02,  2.9858e+00,
-         -6.2730e-01],
-        [-4.6365e-01, -9.4987e-01,  5.4256e-01, -1.2248e-01,  2.0907e+00,
-         -1.3603e-01, -3.4740e-01,  1.6688e+00,  6.3705e-02,  1.8663e-01,
-         -2.1238e+00, -6.7628e-01,  1.9254e+00, -1.3702e+00, -2.0975e+00,
-         -1.8334e+00],
-        [ 1.2940e+00,  1.4197e+00, -4.9821e-01, -6.8095e-01,  3.9126e-01,
-          1.4219e-01, -1.9823e+00,  5.7873e-01, -4.4549e-02,  2.6298e-01,
-          1.8655e+00, -1.6020e+00, -2.9174e-02, -2.3093e+00, -8.4290e-01,
-         -1.5221e+00],
-        [ 4.0364e+00,  4.8958e-02,  4.3893e-02, -1.2625e+00, -1.7469e+00,
-          3.2451e-01,  2.5696e-01,  1.0605e-02, -8.8614e-01,  1.7036e+00,
-         -1.6653e+00,  6.8183e-01,  2.4224e+00, -7.4696e-01, -1.4907e+00,
-         -4.3927e-01],
-        [-7.4870e-01,  2.9296e-01,  3.2445e-01,  1.9559e+00,  1.9984e+00,
-         -1.2386e+00,  1.3927e+00,  1.0136e+00,  2.3117e+00, -9.1084e-01,
-          1.3844e+00, -7.8502e-01,  1.9113e+00, -8.7397e-01,  1.1689e+00,
-         -1.0868e-01],
-        [ 1.6653e+00, -1.1781e+00, -4.1049e-01, -2.5172e-01,  9.4536e-01,
-          4.2285e-02, -6.0630e-01, -1.8824e+00, -1.2138e+00,  1.2282e+00,
-         -9.3026e-01,  3.9967e-01,  5.5031e-01, -1.2448e+00, -7.5570e-01,
-         -3.1867e-01],
-        [ 1.8713e+00,  2.2093e+00, -1.8989e-01, -1.8783e+00, -6.8909e-02,
-          7.8037e-01,  7.6087e-01, -5.7839e-01, -2.0209e+00,  7.6158e-01,
-         -3.2873e-01,  1.6822e+00,  6.7621e-01, -1.2253e-01, -1.5841e+00,
-         -1.1135e+00],
-        [ 7.5985e-01,  1.3764e+00,  5.8144e-01, -2.3496e+00,  9.9876e-01,
-         -1.4381e+00, -2.1336e-01,  1.5945e+00,  8.6354e-01,  1.5658e+00,
-         -6.3578e-02, -4.0869e-01, -2.0490e-01,  1.2157e+00,  5.5737e-01,
-          6.1600e-01],
-        [ 4.7763e-01, -1.3142e+00, -4.7595e-01, -1.6466e+00,  1.9160e+00,
-         -5.5907e-01,  1.0814e+00, -6.1445e-01, -8.1594e-01, -1.1894e-02,
-          2.1732e-01,  1.3689e+00, -1.4679e+00, -1.0958e+00, -1.5812e-01,
-          3.8551e-01],
-        [ 2.2401e-01,  3.6136e-01,  1.4565e-02, -1.4749e+00,  3.0733e-01,
-          9.6101e-01,  1.6224e+00, -2.5405e+00,  4.1123e-01,  9.9364e-01,
-         -5.2373e-02, -8.6734e-01,  9.1881e-01,  1.0502e+00,  3.0944e-01,
-          5.2281e-01],
-        [-3.5810e-01,  2.1364e+00, -1.1644e+00, -2.4368e-01, -1.3276e+00,
-          1.0946e+00,  1.3249e+00,  1.1332e+00, -1.0428e+00, -8.1594e-02,
-          5.9008e-01,  1.5463e+00, -1.3902e+00, -5.2836e-01, -6.5813e-01,
-          9.8978e-01],
-        [ 7.4422e-02,  1.7415e-01, -1.2032e+00,  7.1137e-02,  1.5169e+00,
-         -6.7032e-01, -8.2321e-01,  1.4378e+00, -2.6495e+00, -1.1567e+00,
-         -1.4173e+00, -8.2163e-01, -3.3191e-02,  8.1827e-01, -5.5010e-01,
-          1.5368e-01],
-        [-6.8359e-01, -1.0440e+00, -7.0484e-01,  1.2465e+00,  8.0413e-01,
-         -9.7476e-01, -1.1205e-01, -2.2573e-01,  5.7316e-01,  3.0565e-02,
-          8.2384e-01,  6.8319e-01, -5.7415e-01, -6.0776e-01, -1.5008e-01,
-          1.4332e+00],
-        [ 5.0445e-01, -1.0984e+00, -1.8786e-01,  5.6298e-01,  5.1904e-01,
-          2.0956e+00,  1.0710e+00, -1.0727e+00, -2.6806e-01,  3.7288e-01,
-         -8.9864e-01, -2.1352e-02, -1.3938e+00,  1.9083e+00,  1.9554e+00,
-         -5.6659e-01],
-        [ 1.2113e+00,  8.2574e-01,  3.2273e-01,  3.0817e-01, -6.1910e-01,
-          1.8235e+00,  1.3525e+00, -4.4752e-01,  1.1312e+00, -9.7062e-01,
-         -1.6581e+00, -1.5150e+00,  3.9356e-01,  1.5829e+00, -4.2423e-01,
-          3.1523e+00],
-        [ 8.0916e-01, -9.5331e-01, -9.0784e-01, -5.4115e-02, -3.6497e-01,
-         -9.0059e-01,  1.5485e+00, -2.3176e-01,  6.1200e-01,  2.3427e-01,
-          1.5985e+00,  1.7935e+00,  3.8797e-01,  2.0240e-01,  6.5409e-01,
-          4.4437e-01],
-        [ 1.4412e+00, -1.0564e-01, -1.3934e+00, -1.5726e+00, -3.7947e-01,
-         -5.6682e-01, -4.1768e-01, -1.0670e+00, -4.7568e-01,  1.4697e+00,
-          6.1941e-01, -1.6868e+00, -7.0024e-01,  9.9028e-01, -9.4546e-01,
-         -1.6238e-01],
-        [-1.8794e+00,  1.2933e+00, -5.4475e-01, -1.9787e+00,  1.8239e+00,
-         -2.1610e+00, -4.4259e-02,  1.8252e+00, -1.2674e+00, -3.6022e-01,
-         -2.0044e+00, -2.0490e+00, -1.4967e+00,  4.7870e-01,  1.6972e+00,
-         -2.2793e-01]])), ('index_name_embedding_layer.weight', tensor([[-1.4155, -1.1128, -0.5584, -0.9457,  1.9597, -0.9252],
-        [ 1.4706, -1.6410, -0.3274, -0.2946,  1.2866, -0.0825],
-        [ 2.3661,  1.4109,  1.3233, -2.4845,  0.5390, -0.5559],
-        [ 0.4326,  0.0842,  0.9464, -0.1824,  0.1329,  0.7539],
-        [-1.0346, -1.6267,  0.7385, -1.2461, -1.6631,  1.2198],
-        [-0.4810,  0.0559,  1.0211, -0.9342, -1.5566, -0.8522],
-        [-2.7389,  0.6175, -0.7611, -0.4179,  0.4184,  1.9623],
-        [-0.0641, -1.2389,  0.0320, -1.1110, -1.5444,  2.0960],
-        [-0.3183, -0.7896,  0.2664, -0.6701, -0.5004,  1.0099],
-        [-0.0703,  1.4332, -1.6459, -1.9859, -0.7942, -1.5159]]))])
-OrderedDict([('decoder.0.weight', tensor([[-0.1252,  0.2670,  0.2051,  ...,  0.4917, -0.1070,  0.2829],
-        [ 0.0219,  0.0286,  0.4695,  ...,  0.1460,  0.0664,  0.1904],
-        [ 0.0123, -0.0118, -0.3497,  ...,  0.3641, -0.3297,  0.5078],
-        ...,
-        [-0.0427,  0.4689,  0.3393,  ..., -0.1491,  0.2470,  0.0938],
-        [-0.4399,  0.4887,  0.0768,  ...,  0.4443,  0.0214,  0.0293],
-        [-0.2787,  0.4093, -0.0718,  ...,  0.9037, -0.1755,  0.4359]])), ('decoder.0.bias', tensor([-0.5911, -0.4272, -0.2548, -0.5496, -0.6756, -0.1647, -0.5312, -0.6976,
-        -0.6348, -0.6347, -0.6759, -0.5568, -0.4007, -0.5961, -0.7435, -0.7079,
-        -0.2446, -0.5903, -0.1342, -0.5091, -0.7287, -0.5753, -0.6954, -0.0448,
-        -0.7525, -0.7400, -0.5184, -0.7824, -0.8572, -0.7996, -0.6469, -0.9189,
-        -0.4029,  0.1040, -0.7471, -0.1962, -0.5458, -0.5186, -0.4989, -0.6190,
-        -0.6915,  0.3477, -0.1687, -0.4462, -0.7383, -0.5748, -0.6313, -0.6984,
-        -0.9256, -0.5276, -0.7265, -0.3837, -0.7663, -0.8403, -0.4518, -0.8853,
-        -0.6882, -0.7428, -0.5267, -0.5121, -0.0328, -0.6105, -0.5526, -0.5976,
-        -0.5997, -0.6200, -0.6279, -0.4438, -0.6868, -0.8390, -0.4825, -0.7218,
-        -0.6166, -0.9730, -0.5941, -0.7237, -0.6360,  0.3282, -0.7923, -0.3459,
-        -0.6655, -0.6720, -0.6926, -0.6163, -0.3182, -0.6786,  0.2615, -0.7167,
-        -0.6730, -0.7252, -0.7577, -0.6107, -0.8622, -0.6492, -0.7663, -0.4403,
-        -0.5312, -0.8285, -0.6526, -0.5995, -0.5828, -0.6044, -0.6244, -0.5858,
-        -0.6426, -0.5538, -0.5003, -0.6526, -0.8510, -0.6415, -0.5802, -0.8256,
-        -0.5583, -0.6218,  0.0456, -0.6923,  0.0256, -0.4633, -0.6484, -0.7003,
-        -0.7230,  0.1045, -0.7834, -0.7452, -0.5689, -0.7371, -0.2013, -0.6968])), ('decoder.1.weight', tensor([[ 0.2000, -0.2317, -0.0707,  ..., -0.2701,  0.0497, -0.8179],
-        [-0.0424, -0.1800, -0.1638,  ...,  0.1323, -0.1068,  0.2758],
-        [ 0.7025,  0.6915, -0.3553,  ..., -0.3918, -0.2813,  0.7472],
-        ...,
-        [-0.1499,  0.1226, -0.0120,  ...,  0.2723,  0.0737, -0.0358],
-        [-0.1713, -0.1127, -0.3017,  ..., -0.0564, -0.2048, -0.0292],
-        [-0.5462,  0.2290,  0.3590,  ..., -0.2216, -0.5860,  0.4719]])), ('decoder.1.bias', tensor([-0.1843, -0.7620, -0.6541, -0.7549, -0.2581, -0.2902, -0.8079, -0.6282,
-        -0.7026, -0.6876,  1.0431, -0.6063, -0.9890,  1.4663, -0.4582,  0.8115,
-         1.2293, -0.9712, -0.6162, -0.8196,  0.4535, -0.3308, -0.1801, -0.8746,
-        -0.6973, -0.2779,  0.2026, -0.1380, -0.5894,  0.2024, -0.2567, -0.4722,
-        -0.6894,  1.5032, -0.8196, -0.7778, -0.6304, -0.8138, -0.6180,  0.4407,
-        -0.1280,  1.3141,  0.0460,  0.0803, -0.6200, -0.2610, -0.8454,  0.2739,
-        -0.5220, -0.7968, -0.5035, -0.8742, -0.8344,  1.7653, -0.2268, -0.6945,
-        -0.7948, -0.0908, -0.1798, -0.5363, -0.2754, -0.4863, -0.5733, -0.4568])), ('decoder.2.weight', tensor([[-3.9023e-01, -5.3848e-03, -1.9621e-01, -1.5893e-02,  4.1554e-01,
-         -5.9505e-02,  4.4832e-01,  9.4959e-02, -3.2437e-02,  6.1253e-01,
-         -4.5235e-01, -3.5947e-01, -7.3289e-02, -4.8799e-01,  6.3837e-01,
-         -5.1143e-01,  3.5307e-01, -2.4512e-01, -8.0275e-02,  2.4747e-04,
-         -9.1669e-02, -6.1996e-01,  2.8750e-01, -3.7259e-01,  4.1453e-01,
-         -7.4896e-01,  2.9936e-01, -4.5922e-01,  6.8512e-01, -7.1032e-01,
-         -7.7548e-01,  1.7785e-01, -7.6227e-02, -1.5060e-01, -7.3469e-03,
-         -3.8267e-01,  5.1207e-02, -5.9337e-02,  4.2161e-01,  5.7506e-01,
-          2.8621e-01, -1.9583e-01,  1.0730e-01,  6.2751e-01, -2.0049e-01,
-         -1.2950e-01,  1.1686e-01, -1.1589e-01, -1.4542e+00,  2.5234e-03,
-          6.4392e-01,  1.7396e-01, -2.7886e-02, -9.0873e-01, -1.3216e+00,
-         -2.9390e-01, -1.8700e-02,  1.5857e-02, -6.6308e-01,  2.8122e-01,
-          7.3978e-01,  2.9879e-01, -4.5932e-02, -1.1627e+00],
-        [ 5.5861e-01, -8.8297e-02, -3.6776e-01, -1.4896e-01,  1.6521e-01,
-          4.7959e-02, -5.3513e-02, -2.9748e-01, -1.9280e-01, -2.6125e-01,
-          7.7563e-01, -2.4516e-01, -1.6187e-01,  8.0712e-01,  5.9736e-02,
-          5.6015e-01,  5.4151e-01,  1.8408e-01,  1.1716e-01, -5.5332e-01,
-          7.9127e-01,  6.4352e-02,  2.1100e-01, -6.7184e-02, -2.4174e-02,
-          2.9450e-02,  3.2496e-01,  5.7633e-01, -5.2675e-01,  8.6491e-01,
-          4.6452e-01, -7.1269e-01, -9.2584e-02,  6.5176e-01, -8.8658e-02,
-          6.1742e-01, -1.5930e-01, -8.8376e-02, -1.5394e-01,  5.5411e-01,
-          1.5920e-01,  5.9729e-01,  2.7718e-01,  1.6174e-01,  5.4428e-02,
-          1.1919e-01, -2.2648e-01,  4.5192e-01,  1.0198e+00, -3.3025e-02,
-         -7.3580e-03, -1.3201e+00, -1.4586e-01,  1.0215e+00,  6.8187e-01,
-         -2.0725e-01, -4.9388e-02,  3.2847e-01,  4.4506e-02,  6.1458e-02,
-         -1.6456e-01, -6.6436e-02, -1.3265e-01,  6.5323e-01]])), ('decoder.2.bias', tensor([-0.1078,  1.1988]))])
-num_users: 880
-num_items: 16450
-num_product_groups: 13
-num_color_groups: 49
+num_users: 3153
+num_items: 4807
+num_product_groups: 10
+num_color_groups: 48
+num_index_name: 7
+{'sales_domain': SalesNN(
+  (user_embedding_layer): Embedding(3153, 32)
+  (item_embedding_layer): Embedding(4807, 64)
+), 'customer_domain': CustomersNN(
+  (relu): LeakyReLU(negative_slope=0.01)
+  (encoder): Sequential(
+    (0): Linear(in_features=2, out_features=4, bias=True)
+  )
+), 'product_domain': ProductsNN(
+  (product_group_embedding_layer): Embedding(10, 5)
+  (color_group_embedding_layer): Embedding(48, 16)
+  (index_name_embedding_layer): Embedding(7, 3)
+), 'server': GovernanceNN(
+  (relu): LeakyReLU(negative_slope=0.01)
+  (decoder): Sequential(
+    (0): Linear(in_features=124, out_features=256, bias=True)
+    (1): Linear(in_features=256, out_features=128, bias=True)
+    (2): Linear(in_features=128, out_features=1, bias=True)
+  )
+)}
+Epoch 0 - Training loss: 1.04466712474823
+Epoch 1 - Training loss: 0.5728796720504761
+Epoch 2 - Training loss: 0.33706116676330566
+Epoch 3 - Training loss: 0.232522115111351
+Epoch 4 - Training loss: 0.17846405506134033
+Epoch 5 - Training loss: 0.1467956006526947
+Epoch 6 - Training loss: 0.12417841702699661
+Epoch 7 - Training loss: 0.1104859709739685
+Epoch 8 - Training loss: 0.10162702202796936
+Epoch 9 - Training loss: 0.09851697832345963
+Epoch 10 - Training loss: 0.08698423951864243
+Epoch 11 - Training loss: 0.08092835545539856
+Epoch 12 - Training loss: 0.07174326479434967
+Epoch 13 - Training loss: 0.06813875585794449
+Epoch 14 - Training loss: 0.05810071527957916
+Epoch 15 - Training loss: 0.05336571857333183
+Epoch 16 - Training loss: 0.05624906346201897
+Epoch 17 - Training loss: 0.04605778679251671
+Epoch 18 - Training loss: 0.04237857460975647
+Epoch 19 - Training loss: 0.040149759501218796
+Epoch 20 - Training loss: 0.03534211590886116
+Epoch 21 - Training loss: 0.03550766780972481
+Epoch 22 - Training loss: 0.03559873253107071
+Epoch 23 - Training loss: 0.029834896326065063
+Epoch 24 - Training loss: 0.03363223373889923
+Epoch 25 - Training loss: 0.03162812814116478
+Epoch 26 - Training loss: 0.027468366548419
+Epoch 27 - Training loss: 0.025206170976161957
+Epoch 28 - Training loss: 0.030489400029182434
+Epoch 29 - Training loss: 0.02630995213985443
+Epoch 30 - Training loss: 0.02718758024275303
+Epoch 31 - Training loss: 0.03009663335978985
+Epoch 32 - Training loss: 0.024296211078763008
+Epoch 33 - Training loss: 0.02199750579893589
+Epoch 34 - Training loss: 0.025940828025341034
+Epoch 35 - Training loss: 0.02228391170501709
+Epoch 36 - Training loss: 0.01672852225601673
+Epoch 37 - Training loss: 0.02446047030389309
+Epoch 38 - Training loss: 0.022506678476929665
+Epoch 39 - Training loss: 0.021118737757205963
+Epoch 40 - Training loss: 0.019242284819483757
+Epoch 41 - Training loss: 0.01954691857099533
+Epoch 42 - Training loss: 0.016073543578386307
+Epoch 43 - Training loss: 0.016408881172537804
+Epoch 44 - Training loss: 0.016980772837996483
+Epoch 45 - Training loss: 0.019924234598875046
+Epoch 46 - Training loss: 0.017780225723981857
+Epoch 47 - Training loss: 0.013221428729593754
+Epoch 48 - Training loss: 0.010355371981859207
+Epoch 49 - Training loss: 0.00883415061980486
+Epoch 50 - Training loss: 0.01779700629413128
+Epoch 51 - Training loss: 0.012891716323792934
+Epoch 52 - Training loss: 0.01475472841411829
+Epoch 53 - Training loss: 0.016694504767656326
+Epoch 54 - Training loss: 0.010378330014646053
+Epoch 55 - Training loss: 0.009236582554876804
+Epoch 56 - Training loss: 0.008274970576167107
+Epoch 57 - Training loss: 0.01185038685798645
+Epoch 58 - Training loss: 0.00868490245193243
+Epoch 59 - Training loss: 0.008167820051312447
+Epoch 60 - Training loss: 0.009676779620349407
+Epoch 61 - Training loss: 0.008138337172567844
+Epoch 62 - Training loss: 0.00897131022065878
+Epoch 63 - Training loss: 0.008992133662104607
+Epoch 64 - Training loss: 0.0073562501929700375
+Epoch 65 - Training loss: 0.009841158986091614
+Epoch 66 - Training loss: 0.005935829132795334
+Epoch 67 - Training loss: 0.013888918794691563
+Epoch 68 - Training loss: 0.010351909324526787
+Epoch 69 - Training loss: 0.003272981382906437
+Epoch 70 - Training loss: 0.008890478871762753
+Epoch 71 - Training loss: 0.006958611309528351
+Epoch 72 - Training loss: 0.0031938618049025536
+Epoch 73 - Training loss: 0.0038182490970939398
+Epoch 74 - Training loss: 0.0034523867070674896
+Epoch 75 - Training loss: 0.006803619209676981
+Epoch 76 - Training loss: 0.007861476391553879
+Epoch 77 - Training loss: 0.004742583259940147
+Epoch 78 - Training loss: 0.006241513881832361
+Epoch 79 - Training loss: 0.0024838061071932316
+Epoch 80 - Training loss: 0.002280227607116103
+Epoch 81 - Training loss: 0.008275897242128849
+Epoch 82 - Training loss: 0.007193384692072868
+Epoch 83 - Training loss: 0.005380900111049414
+Epoch 84 - Training loss: 0.0022677979432046413
+Epoch 85 - Training loss: 0.001417335239239037
+Epoch 86 - Training loss: 0.0005712461424991488
+Epoch 87 - Training loss: 0.007413939107209444
+Epoch 88 - Training loss: 0.009172425605356693
+Epoch 89 - Training loss: 0.0037223228719085455
+Epoch 90 - Training loss: 0.0024561318568885326
+Epoch 91 - Training loss: 0.0037700932007282972
+Epoch 92 - Training loss: 0.008290338329970837
+Epoch 93 - Training loss: 0.003519990248605609
+Epoch 94 - Training loss: 0.00335481739602983
+Epoch 95 - Training loss: 0.0067122322507202625
+Epoch 96 - Training loss: 0.0024411899503320456
+Epoch 97 - Training loss: 0.002763530006632209
+Epoch 98 - Training loss: 0.006561957765370607
+Epoch 99 - Training loss: 0.0052967979572713375
+Epoch 100 - Training loss: 0.005213055294007063
+Epoch 101 - Training loss: 0.0021305696573108435
+Epoch 102 - Training loss: 0.003269009292125702
+Epoch 103 - Training loss: 0.008444641716778278
+Epoch 104 - Training loss: 0.010251362808048725
+Epoch 105 - Training loss: 0.003752819960936904
+Epoch 106 - Training loss: 0.001015119138173759
+Epoch 107 - Training loss: 0.008083500899374485
+Epoch 108 - Training loss: 0.004801088944077492
+Epoch 109 - Training loss: 0.0011354942107573152
+Epoch 110 - Training loss: 0.00039511171053163707
+Epoch 111 - Training loss: 0.0002770968421828002
+Epoch 112 - Training loss: 0.008860708214342594
+Epoch 113 - Training loss: 0.009786602109670639
+Epoch 114 - Training loss: 0.003704533213749528
+Epoch 115 - Training loss: 0.0010407957015559077
+Epoch 116 - Training loss: 0.0006231743609532714
+Epoch 117 - Training loss: 0.005424668546766043
+Epoch 118 - Training loss: 0.00819814670830965
+Epoch 119 - Training loss: 0.008464825339615345
+Epoch 120 - Training loss: 0.0038083475083112717
+Epoch 121 - Training loss: 0.0015563666820526123
+Epoch 122 - Training loss: 0.003767063608393073
+Epoch 123 - Training loss: 0.0031776565592736006
+Epoch 124 - Training loss: 0.0008493903442285955
+Epoch 125 - Training loss: 0.002258030930534005
+Epoch 126 - Training loss: 0.0070540704764425755
+Epoch 127 - Training loss: 0.006542474031448364
+Epoch 128 - Training loss: 0.00575149105861783
+Epoch 129 - Training loss: 0.003207593457773328
+Epoch 130 - Training loss: 0.002093152841553092
+Epoch 131 - Training loss: 0.0018380549736320972
+Epoch 132 - Training loss: 0.0009833324002102017
+Epoch 133 - Training loss: 0.0004894984303973615
+Epoch 134 - Training loss: 7.62766576372087e-05
+Epoch 135 - Training loss: 0.007599459495395422
+Epoch 136 - Training loss: 0.0062570287846028805
+Epoch 137 - Training loss: 0.0014036190696060658
+Epoch 138 - Training loss: 0.006846947129815817
+Epoch 139 - Training loss: 0.00320319808088243
+Epoch 140 - Training loss: 0.0010186104336753488
+Epoch 141 - Training loss: 0.009423415176570415
+Epoch 142 - Training loss: 0.00537560461089015
+Epoch 143 - Training loss: 0.005955429747700691
+Epoch 144 - Training loss: 0.002712156856432557
+Epoch 145 - Training loss: 0.00111570383887738
+Epoch 146 - Training loss: 0.0003438130661379546
+Epoch 147 - Training loss: 0.0004848715616390109
+Epoch 148 - Training loss: 0.0036332495510578156
+Epoch 149 - Training loss: 0.013101216405630112
+Epoch 150 - Training loss: 0.003908598329871893
+Epoch 151 - Training loss: 0.0023246926721185446
+Epoch 152 - Training loss: 0.002851993776857853
+ERROR:root:Internal Python error in the inspect module.
+Below is the traceback from this internal error.
+
+Traceback (most recent call last):
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/tensors/interpreters/native.py", line 337, in handle_func_command
+    cmd, args_, kwargs_, return_args_type=True
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/frameworks/hook/hook_args.py", line 157, in unwrap_args_from_function
+    new_args = hook_args(args_)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/frameworks/hook/hook_args.py", line 356, in <lambda>
+    return lambda x: f(lambdas, x)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/frameworks/hook/hook_args.py", line 551, in five_fold
+    lambdas[0](args_[0], **kwargs),
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/frameworks/hook/hook_args.py", line 331, in <lambda>
+    else lambda i: forward_func[type(i)](i)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/hook/hook_args.py", line 27, in <lambda>
+    else (_ for _ in ()).throw(PureFrameworkTensorFoundError),
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/hook/hook_args.py", line 27, in <genexpr>
+    else (_ for _ in ()).throw(PureFrameworkTensorFoundError),
+syft.exceptions.PureFrameworkTensorFoundError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/IPython/core/interactiveshell.py", line 3457, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File "/tmp/ipykernel_156516/504512500.py", line 12, in <module>
+    loss = train(data_ptr, labels, splitnn)
+  File "/tmp/ipykernel_156516/4013794522.py", line 115, in train
+    pred = splitNN.forward(x)
+  File "/tmp/ipykernel_156516/4013794522.py", line 72, in forward
+    client_output[owner.id] = self.models[owner.id](data_pointer[owner.id][0], data_pointer[owner.id][1], data_pointer[owner.id][2])
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/tmp/ipykernel_156516/3475812656.py", line 95, in forward
+    color_group_embedding = self.color_group_embedding_layer(color_groups)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/torch/nn/modules/module.py", line 532, in __call__
+    result = self.forward(*input, **kwargs)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/torch/nn/modules/sparse.py", line 114, in forward
+    self.norm_type, self.scale_grad_by_freq, self.sparse)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/frameworks/hook/hook.py", line 335, in overloaded_func
+    response = handle_func_command(command)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/tensors/interpreters/native.py", line 356, in handle_func_command
+    response = new_type.handle_func_command(new_command)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/pointers/object_pointer.py", line 211, in handle_func_command
+    response = owner.send_command(location, cmd_name=cmd, args_=args_, kwargs_=kwargs_)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/workers/base.py", line 525, in send_command
+    ret_val = self.send_msg(message, location=recipient)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/workers/base.py", line 316, in send_msg
+    bin_response = self._send_msg(bin_message, location)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/workers/virtual.py", line 12, in _send_msg
+    return location._recv_msg(message)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/workers/virtual.py", line 22, in _recv_msg
+    return self.recv_msg(message)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/workers/base.py", line 356, in recv_msg
+    response = handler.handle(msg)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/abstract/message_handler.py", line 20, in handle
+    return self.routing_table[type(msg)](msg)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/workers/message_handler.py", line 55, in execute_tensor_command
+    return self.execute_computation_action(cmd.action)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/workers/message_handler.py", line 118, in execute_computation_action
+    response = command(*args_, **kwargs_)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/frameworks/hook/hook.py", line 335, in overloaded_func
+    response = handle_func_command(command)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/tensors/interpreters/native.py", line 380, in handle_func_command
+    response = cls._get_response(cmd, args_, kwargs_)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/tensors/interpreters/native.py", line 414, in _get_response
+    response = command_method(*args_, **kwargs_)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/torch/nn/functional.py", line 1484, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/generic/frameworks/hook/hook.py", line 335, in overloaded_func
+    response = handle_func_command(command)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/tensors/interpreters/native.py", line 380, in handle_func_command
+    response = cls._get_response(cmd, args_, kwargs_)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/syft/frameworks/torch/tensors/interpreters/native.py", line 414, in _get_response
+    response = command_method(*args_, **kwargs_)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/IPython/core/interactiveshell.py", line 2077, in showtraceback
+    stb = value._render_traceback_()
+AttributeError: 'KeyboardInterrupt' object has no attribute '_render_traceback_'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/IPython/core/ultratb.py", line 1101, in get_records
+    return _fixed_getinnerframes(etb, number_of_lines_of_context, tb_offset)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/IPython/core/ultratb.py", line 248, in wrapped
+    return f(*args, **kwargs)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/site-packages/IPython/core/ultratb.py", line 281, in _fixed_getinnerframes
+    records = fix_frame_records_filenames(inspect.getinnerframes(etb, context))
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/inspect.py", line 1502, in getinnerframes
+    frameinfo = (tb.tb_frame,) + getframeinfo(tb, context)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/inspect.py", line 1460, in getframeinfo
+    filename = getsourcefile(frame) or getfile(frame)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/inspect.py", line 696, in getsourcefile
+    if getattr(getmodule(object, filename), '__loader__', None) is not None:
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/inspect.py", line 739, in getmodule
+    f = getabsfile(module)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/inspect.py", line 708, in getabsfile
+    _filename = getsourcefile(object) or getfile(object)
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/inspect.py", line 693, in getsourcefile
+    if os.path.exists(filename):
+  File "/home/haoyuan/.conda/envs/datamesh-dev/lib/python3.7/genericpath.py", line 19, in exists
+    os.stat(path)
+KeyboardInterrupt
+num_users: 3153
+num_items: 4807
+num_product_groups: 10
+num_color_groups: 48
 WARNING:root:Torch was already hooked... skipping hooking process
-Accuracy on dataset Test set is (87.4%)
-[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
