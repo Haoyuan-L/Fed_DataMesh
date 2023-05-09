@@ -14,11 +14,8 @@ class SalesNN(nn.Module):
             self, 
             num_users: int, 
             num_items: int,
-            input_size: int = 48,
             user_embedding_dim: int = 32,
             item_embedding_dim: int = 64,
-            hidden_size_1: int = 128,
-            output_size: int = 32,
         ):
         super().__init__()
         self.user_embedding_layer = nn.Embedding(num_embeddings=num_users, embedding_dim=user_embedding_dim)
@@ -30,7 +27,7 @@ class SalesNN(nn.Module):
 
         latent_vec = torch.cat([user_embedding, item_embedding], dim=-1)
 
-        return latent_vec
+        return torch.squeeze(latent_vec)
     
     # save weights of partial model on remote worker
     def get_weights(self):
@@ -46,7 +43,7 @@ class CustomersNN(nn.Module):
     def __init__(
             self,
             input_size: int = 2,
-            output_size: int = 5,
+            output_size: int = 4,
         ):
         super().__init__()
         self.relu = nn.LeakyReLU()
@@ -66,7 +63,7 @@ class CustomersNN(nn.Module):
         for layer in self.encoder:
             latent_vec = layer(latent_vec)
         
-        return latent_vec
+        return torch.squeeze(latent_vec)
     
     # save weights of partial model on remote worker
     def get_weights(self):
@@ -85,9 +82,9 @@ class ProductsNN(nn.Module):
             num_product_groups: int,
             num_color_groups: int,
             num_index_name: int,
-            product_group_embedding_dim: int = 8,
+            product_group_embedding_dim: int = 5,
             color_group_embedding_dim: int = 16,
-            index_name_embedding_dim: int = 6,
+            index_name_embedding_dim: int = 3,
         ):
         super().__init__()
         self.product_group_embedding_layer = nn.Embedding(num_embeddings=num_product_groups, embedding_dim=product_group_embedding_dim)
@@ -103,7 +100,7 @@ class ProductsNN(nn.Module):
 
         latent_vec = torch.cat([product_group_embedding, color_group_embedding, index_name_embedding], dim=-1)
         
-        return latent_vec
+        return torch.squeeze(latent_vec)
     
     # save weights of partial model on remote worker
     def get_weights(self):
