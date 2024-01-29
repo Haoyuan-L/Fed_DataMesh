@@ -1,2 +1,2 @@
-# thesis_DataMesh
-Thesis project - Empowering data mesh with federated learning
+# Fed_DataMesh
+Project - Empowering data mesh with federated learning
