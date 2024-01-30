@@ -2,7 +2,7 @@
 
 ## Environment Setup:
 Install Conda Environment via enviroment.yml
-''' conda env create -f enviroment.yml '''
+``` conda env create -f enviroment.yml ```
 
 ## Centralized Training
 Fraud Detection: Centralized_FraudNN
