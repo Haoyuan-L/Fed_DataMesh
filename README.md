@@ -1,9 +1,8 @@
-# Fed_DataMesh
-Project - Empowering data mesh with federated learning
+# Empowering data mesh with federated learning
 
 ## Environment Setup:
 Install Conda Environment via enviroment.yml
-conda env create -f enviroment.yml
+''' conda env create -f enviroment.yml '''
 
 ## Centralized Training
 Fraud Detection: Centralized_FraudNN
